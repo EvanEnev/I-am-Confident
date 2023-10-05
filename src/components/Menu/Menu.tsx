@@ -36,7 +36,7 @@ export default function Menu() {
                   style={{
                     gridTemplateColumns: `repeat(${
                       menuPosition.elements?.length || 5
-                    }, minmax(0, 1fr));`,
+                    }, minmax(0, 1fr))`,
                   }}>
                   {menuPosition.elements?.map((element, index) => {
                     return (

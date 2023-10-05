@@ -6,7 +6,7 @@ export default function Navbar() {
   const [active, setActive] = useState<string>('Главная');
 
   const buttons: {name: string; href: string}[] = [
-    {name: 'Главная', href: '#news'},
+    {name: 'Главная', href: '#'},
     {name: 'Меню', href: '#menu'},
     {name: 'Контакты', href: '#contacts'},
   ];

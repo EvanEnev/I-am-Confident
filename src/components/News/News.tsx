@@ -1,4 +1,5 @@
 'use client';
+
 import Carousel from 'nuka-carousel';
 export default function News() {
   const elements = [
@@ -15,6 +16,30 @@ export default function News() {
   const defaultControlsConfig = {
     nextButtonText: '>',
     prevButtonText: '<',
+    nextButtonStyle: {
+      color: '#FFFFFF',
+      borderRadius: 10,
+      padding: 5,
+      aspectRatio: 1,
+      backgroundColor: '#5E2605',
+      width: 30,
+      height: 30,
+      alignItems: 'center',
+      justifyContent: 'center',
+      display: 'flex',
+    },
+    prevButtonStyle: {
+      color: '#FFFFFF',
+      borderRadius: 10,
+      padding: 5,
+      aspectRatio: 1,
+      backgroundColor: '#5E2605',
+      width: 30,
+      height: 30,
+      alignItems: 'center',
+      justifyContent: 'center',
+      display: 'flex',
+    },
   };
 
   return (
