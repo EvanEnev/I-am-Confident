@@ -12,7 +12,7 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="flex flex-col sm:flex-row justify-between sticky min-w-screen w-full items-center top-0 z-10 p-[20px] bg-[#fcf5e8] border-b-black border-b-2 border-opacity-30 rounded-t-[20px]">
+    <div className="flex flex-col sm:flex-row justify-between sticky min-w-screen w-full items-center top-0 z-10 p-[20px] bg-[#fcf5e8] border-b-accent border-b-2 border-opacity-30 rounded-t-[20px]">
       <div className="flex flex-col items-end">
         <span className="typeface text-accent font-bold">I am Confident</span>
         <span className="typeface text-accent text-[22px]">кофейня</span>

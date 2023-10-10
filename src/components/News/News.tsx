@@ -26,7 +26,7 @@ export default function News() {
 
   return (
     <div
-      className="card p-0 border-black border-opacity-30 w-full sm:w-[80%] h-[80%] sm:h-[50vh] self-center"
+      className="card p-0 border-accent w-full sm:w-[80%] h-[80%] sm:h-[50vh] self-center"
       id="news">
       <Carousel wrapAround defaultControlsConfig={defaultControlsConfig}>
         {positions.map((position, index) => {
