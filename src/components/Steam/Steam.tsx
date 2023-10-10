@@ -20,7 +20,7 @@ export default function Steam() {
   };
 
   return (
-    <div className="absolute top-0 z-0">
+    <div className="absolute top-0 z-0 max-w-full">
       <div
         className="absolute left-[10vw]"
         style={{top: randomInt(20, 50) + 'vh'}}>
@@ -32,12 +32,12 @@ export default function Steam() {
         <Steam2 />
       </div>
       <div
-        className="absolute left-[70vw]"
+        className="absolute left-[70vw] hidden sm:block"
         style={{top: randomInt(20, 50) + 'vh'}}>
         <Steam3 />
       </div>
       <div
-        className="absolute left-[90vw]"
+        className="absolute left-[90vw] hidden sm:block"
         style={{top: randomInt(20, 50) + 'vh'}}>
         <Steam4 />
       </div>

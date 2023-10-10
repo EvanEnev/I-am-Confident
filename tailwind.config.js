@@ -9,10 +9,16 @@ const config = {
     './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    backgroundColor: {DEFAULT: '#F5DEB3'},
+    backgroundColor: {
+      DEFAULT: '#F5DEB3',
+      accent: '#5E2605',
+      transparent: 'transparent',
+    },
+    colors: {accent: '#5E2605', white: 'white'},
     textColor: {
       DEFAULT: '#000000',
       accent: '#5E2605',
+      button: '#FFFFFF',
     },
   },
   plugins: [
@@ -26,6 +32,8 @@ const config = {
         '.button': {
           backgroundColor: '#5E2605',
           borderRadius: '10px',
+          borderWidth: 2,
+          borderColor: theme('colors.accent'),
           padding: 10,
           color: '#FFFFFF',
         },
