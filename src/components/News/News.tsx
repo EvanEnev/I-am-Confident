@@ -8,6 +8,7 @@ export default function News() {
     color: '#FFFFFF',
     borderRadius: 10,
     padding: 5,
+    'margin-inline': 10,
     aspectRatio: 1,
     backgroundColor: '#5E2605',
     width: 30,
