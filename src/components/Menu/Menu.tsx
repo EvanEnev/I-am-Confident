@@ -2,6 +2,7 @@
 import positions, {MenuPosition} from '@/src/components/Menu/MenuPositions';
 import {useState} from 'react';
 import tailwindConfigResolved from '@/src/functions/tailwindConfigResolved';
+import daisyuiColors from 'daisyui/src/theming/themes';
 
 export default function Menu() {
   const [selectedCategory, setSelectedCategory] = useState<
@@ -25,7 +26,7 @@ export default function Menu() {
       className="flex flex-col items-center justify-center w-full gap-y-[60px]">
       <span className="typeface font-bold text-accent">Меню</span>
       <div className="flex flex-col sm:flex-row w-full sm:w-[80%] gap-y-[80px] items-center">
-        <div className="flex flex-col gap-y-[20px] self-start w-full sm:min-w-[25%] sm:max-w-[25%]">
+        <ul className="flex flex-col gap-y-[20px] self-start w-full sm:min-w-[25%]">
           {positions.map((menuPosition, index) => {
             const category = menuPosition.category;
 
@@ -33,20 +34,16 @@ export default function Menu() {
               category === selectedCategory?.category || category === hovered
                 ? // @ts-ignore
                   tailwindConfigResolved.theme.colors.white
-                : // @ts-ignore
-                  tailwindConfigResolved.theme.colors.accent;
+                : null;
 
             return (
-              <div
+              <li
                 onMouseEnter={() => setHovered(category)}
                 onMouseLeave={() => setHovered(null)}
                 key={index}
-                className={`flex flex-row gap-x-[5px] button text-2xl items-center cursor-pointer ${
-                  category === selectedCategory?.category
-                    ? 'bg-accent'
-                    : 'bg-transparent text-accent'
-                }
-                hover:bg-accent hover:text-button transition-colors`}
+                className={`w-full h-fit btn btn-primary justify-start typeface text-xl ${
+                  category === selectedCategory?.category ? '' : 'btn-outline'
+                }`}
                 onClick={() => {
                   setSelectedCategory(
                     positions.find(
@@ -55,19 +52,15 @@ export default function Menu() {
                   );
                 }}>
                 {menuPosition?.icon ? (
-                  <menuPosition.icon
-                    stroke={color}
-                    fill={color}
-                    className={`h-full stroke-1 w-full`}
-                  />
+                  <menuPosition.icon stroke={color} fill={color} className="" />
                 ) : (
                   ''
                 )}
-                <span>{category}</span>
-              </div>
+                <span className="">{category}</span>
+              </li>
             );
           })}
-        </div>
+        </ul>
         <div className="flex flex-col gap-y-[20px] px-[10px] sm:px-[40px] self-start w-full sm:min-w-[75%] sm:max-w-[75%]">
           <div className="flex flex-row gap-x-[5px]">
             {selectedCategory?.icon ? (

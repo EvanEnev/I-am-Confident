@@ -21,7 +21,26 @@ const config = {
       button: '#FFFFFF',
     },
   },
+  daisyui: {
+    themes: [
+      {
+        main: {
+          primary: '#5E2605',
+          'primary-focus': '#5E2605',
+          secondary: '#5E2605',
+          accent: '#5E2605',
+          neutral: '#f5deb3',
+          'base-100': '#f5deb3',
+          info: '#3abff8',
+          success: '#36d399',
+          warning: '#fbbd23',
+          error: '#f87272',
+        },
+      },
+    ],
+  },
   plugins: [
+    require('daisyui'),
     plugin(function ({addComponents, theme}) {
       addComponents({
         '.typeface': {

@@ -2,13 +2,13 @@
 
 import Carousel from 'nuka-carousel';
 import positions from '@/src/components/News/NewsPositions';
-import tailwindConfigResolved from '@/src/functions/tailwindConfigResolved';
+
 export default function News() {
   const buttonStyle = {
     color: '#FFFFFF',
     borderRadius: 10,
     padding: 5,
-    'margin-inline': 10,
+    marginInline: 10,
     aspectRatio: 1,
     backgroundColor: '#5E2605',
     width: 30,
@@ -23,10 +23,12 @@ export default function News() {
     prevButtonText: '<',
     nextButtonStyle: buttonStyle,
     prevButtonStyle: buttonStyle,
+    prevButtonClassName: 'btn btn-primary',
+    nextButtonClassName: 'btn btn-primary',
   };
 
   return (
-    <div
+    <section
       className="card p-0 border-accent w-full sm:w-[80%] h-[80%] sm:h-[50vh] self-center"
       id="news">
       <Carousel wrapAround defaultControlsConfig={defaultControlsConfig}>
@@ -39,11 +41,7 @@ export default function News() {
                 className="w-full sm:w-[30%] overflow-hidden relative item-center justify-center flex flex-col gap-y-[5px]"
                 key={index}>
                 <div className="flex flex-row gap-x-[5px]">
-                  {position.icon ? (
-                    <position.icon className={`h-full stroke-1 w-full`} />
-                  ) : (
-                    ''
-                  )}
+                  {position.icon ? <position.icon /> : ''}
                   <span className="typeface font-bold text-accent">
                     {position.title}
                   </span>
@@ -61,6 +59,6 @@ export default function News() {
           );
         })}
       </Carousel>
-    </div>
+    </section>
   );
 }
